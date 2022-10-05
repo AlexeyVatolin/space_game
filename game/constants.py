@@ -1,3 +1,7 @@
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+
 TIC_TIMEOUT = 0.1
 STARS = ("+", "*", ".", ":")
 STARS_RATIO = 55

@@ -9,7 +9,7 @@ repos:
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
-        exclude: '(?:LICENSE|^frames/.*$)'
+        exclude: '(?:LICENSE|^game/frames/.*$)'
 
   - repo: local
     hooks:

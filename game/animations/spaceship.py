@@ -3,6 +3,7 @@ import itertools
 from pathlib import Path
 
 from animations.frame import draw_frame, get_frame_size
+from constants import BASE_DIR
 from controls.controls import read_controls
 from custom_types import Window
 
@@ -33,7 +34,7 @@ def _get_spaceship_postion(canvas: Window, frame: str, row: int, column: int) ->
 async def animate_spaceship(canvas: Window) -> None:
     canvas.nodelay(True)
 
-    frames = [f.read_text() for f in sorted(Path("frames").glob("rocket_frame_*.txt"))]
+    frames = [f.read_text() for f in sorted((BASE_DIR / "frames").glob("rocket_frame_*.txt"))]
     if not len(frames):
         raise ValueError("No frames for spaceship animation")
 
